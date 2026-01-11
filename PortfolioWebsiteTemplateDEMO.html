@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio Template - DEMO VERSION</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#1e293b;overflow-x:hidden;position:relative}body::before{content:'DEMO VERSION';position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-45deg);font-size:8vw;font-weight:900;color:rgba(59,130,246,0.08);z-index:1;pointer-events:none;white-space:nowrap}body::after{content:'© PixelyCode - Unlicensed Demo';position:fixed;bottom:10px;right:10px;background:rgba(59,130,246,0.95);color:#fff;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;z-index:9999;pointer-events:none}.demo-banner{position:fixed;top:0;left:0;right:0;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;padding:12px 20px;text-align:center;z-index:10000;box-shadow:0 4px 6px rgba(0,0,0,0.1)}.demo-banner p{margin:0;font-size:14px;font-weight:600}.demo-banner a{color:#fff;text-decoration:underline;margin-left:10px}.header{position:fixed;top:52px;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid #e2e8f0;z-index:1000;padding:16px 0}.container{width:90%;max-width:1200px;margin:0 auto;padding:0 16px}.header-inner{display:flex;justify-content:space-between;align-items:center}.logo{font-size:24px;font-weight:700;color:#1e293b}.nav-links{list-style:none;display:flex;gap:32px}.nav-link{color:#64748b;font-weight:500;text-decoration:none;transition:color .2s}.nav-link:hover{color:#3b82f6}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:120px;background:linear-gradient(135deg,#fff 0%,#f8fafc 100%)}.hero-content{max-width:800px;position:relative;z-index:2}.hero-title{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:16px}.highlight{color:#3b82f6}.hero-subtitle{font-size:clamp(1.25rem,3vw,1.75rem);color:#64748b;font-weight:600;margin-bottom:32px}.typing-text{color:#3b82f6;border-right:2px solid #3b82f6;padding-right:5px;animation:blink .7s step-end infinite}@keyframes blink{50%{border-color:transparent}}.hero-text{font-size:18px;color:#94a3b8;margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto}.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.btn{display:inline-block;padding:14px 32px;font-weight:600;border-radius:8px;transition:all .2s;cursor:pointer;text-decoration:none}.btn-primary{background:#3b82f6;color:#fff;box-shadow:0 4px 6px rgba(59,130,246,0.3)}.btn-primary:hover{background:#2563eb;transform:translateY(-2px)}.btn-secondary{background:transparent;color:#1e293b;border:2px solid #e2e8f0}.btn-secondary:hover{border-color:#3b82f6;color:#3b82f6}.stats{background:#f8fafc;padding:48px 0;position:relative;z-index:2}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:48px;text-align:center}.stat-number{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;color:#3b82f6;margin-bottom:8px}.stat-number::after{content:'+'}.stat-label{color:#64748b;font-size:16px;font-weight:500}.section{padding:64px 0;position:relative;z-index:2}.section-title{font-size:clamp(2rem,4vw,2.5rem);text-align:center;margin-bottom:16px}.section-subtitle{text-align:center;color:#64748b;font-size:18px;margin-bottom:48px}.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;margin-top:48px}.project-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;transition:all .3s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}.project-card:hover{transform:translateY(-8px);box-shadow:0 20px 25px rgba(0,0,0,0.1);border-color:#3b82f6}.project-image{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#dbeafe,#93c5fd);display:flex;align-items:center;justify-content:center;color:#3b82f6;font-weight:700;font-size:20px}.project-content{padding:32px}.project-title{font-size:22px;margin-bottom:8px}.project-description{color:#64748b;margin-bottom:16px;line-height:1.6}.project-tags{display:flex;gap:8px;flex-wrap:wrap}.tag{background:#dbeafe;color:#3b82f6;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:500}.locked-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;z-index:10001}.locked-content{background:#fff;padding:48px;border-radius:16px;text-align:center;max-width:500px;margin:20px}.locked-content h2{color:#1e293b;margin-bottom:16px}.locked-content p{color:#64748b;margin-bottom:32px;line-height:1.6}.footer{background:#f8fafc;border-top:1px solid #e2e8f0;padding:48px 0;text-align:center;position:relative;z-index:2}.footer-text{color:#64748b;margin-bottom:8px}.watermark{position:fixed;bottom:50px;right:20px;background:rgba(239,68,68,0.95);color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;font-size:14px;z-index:9998;pointer-events:none;box-shadow:0 4px 6px rgba(0,0,0,0.2)}@media(max-width:768px){.nav-links{display:none}.hero{min-height:90vh}.stats-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo-banner">
+<p>🔒 DEMO VERSION - Limited Functionality | <a href="#purchase">Purchase Full Version</a></p>
+</div>
+
+<header class="header">
+<div class="container header-inner">
+<a href="#home" class="logo">Portfolio Demo</a>
+<nav>
+<ul class="nav-links">
+<li><a href="#home" class="nav-link">Home</a></li>
+<li><a href="#projects" class="nav-link">Projects</a></li>
+<li><a href="#purchase" class="nav-link">Buy Full Version</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section id="home" class="hero">
+<div class="container hero-content">
+<h1 class="hero-title">Hi, I'm <span class="highlight">Your Name</span></h1>
+<p class="hero-subtitle">I'm a <span class="typing-text" id="t"></span></p>
+<p class="hero-text">This is a demo version with limited features. Purchase the full template for complete source code and customization.</p>
+<div class="hero-buttons">
+<a href="#projects" class="btn btn-primary">View Demo</a>
+<a href="#purchase" class="btn btn-secondary">Purchase Full Version</a>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-number">50</div>
+<div class="stat-label">Projects Completed</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">30</div>
+<div class="stat-label">Happy Clients</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">5</div>
+<div class="stat-label">Years Experience</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">15</div>
+<div class="stat-label">Awards Won</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<h2 class="section-title">Featured Projects</h2>
+<p class="section-subtitle">Demo preview - Full version includes real project showcases</p>
+<div class="project-grid">
+<article class="project-card">
+<div class="project-image">DEMO CONTENT</div>
+<div class="project-content">
+<h3 class="project-title">E-commerce Website</h3>
+<p class="project-description">A fully responsive online store with shopping cart functionality.</p>
+<div class="project-tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-image">DEMO CONTENT</div>
+<div class="project-content">
+<h3 class="project-title">Portfolio Dashboard</h3>
+<p class="project-description">An interactive dashboard with data visualization.</p>
+<div class="project-tags">
+<span class="tag">React</span>
+<span class="tag">CSS</span>
+<span class="tag">API</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-image">DEMO CONTENT</div>
+<div class="project-content">
+<h3 class="project-title">Weather App</h3>
+<p class="project-description">A weather application with beautiful design.</p>
+<div class="project-tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">API</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="purchase" class="section" style="background:#f8fafc">
+<div class="container" style="text-align:center;max-width:700px">
+<h2 class="section-title">Purchase Full Version</h2>
+<p class="section-subtitle">Get complete source code, full customization, and lifetime updates</p>
+<div style="background:#fff;padding:48px;border-radius:12px;border:1px solid #e2e8f0;margin:32px 0">
+<h3 style="font-size:48px;color:#3b82f6;margin-bottom:16px">$29</h3>
+<p style="color:#64748b;margin-bottom:32px">One-time payment • Lifetime access</p>
+<ul style="list-style:none;text-align:left;margin-bottom:32px;color:#64748b">
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ Complete HTML, CSS & JavaScript source code</li>
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ Full customization with CSS variables</li>
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ Dark mode functionality</li>
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ Working contact form (EmailJS integration)</li>
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ All animations and interactions</li>
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ Responsive design for all devices</li>
+<li style="padding:12px 0;border-bottom:1px solid #e2e8f0">✅ Documentation and setup guide</li>
+<li style="padding:12px 0">✅ Free lifetime updates</li>
+</ul>
+<a href="https://gumroad.com/your-link" class="btn btn-primary" style="font-size:18px;padding:16px 48px">Purchase Now</a>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<p class="footer-text">© 2026 <span class="highlight">PixelyCode</span> - Portfolio Template</p>
+<p style="color:#94a3b8;font-size:14px">Demo Version • Purchase for full source code</p>
+</div>
+</footer>
+
+<div class="watermark">🔒 UNLICENSED DEMO</div>
+
+<div class="locked-overlay" id="locked">
+<div class="locked-content">
+<h2>🔒 Feature Locked</h2>
+<p>This is a demo version with limited functionality. Purchase the full template to unlock all features, get complete source code, and full customization options.</p>
+<a href="#purchase" class="btn btn-primary" onclick="document.getElementById('locked').style.display='none'">View Pricing</a>
+</div>
+</div>
+
+<script>
+(function(){const d=()=>{const e=new MouseEvent('contextmenu',{bubbles:true,cancelable:true,view:window});document.dispatchEvent(e)};document.addEventListener('contextmenu',e=>{e.preventDefault();document.getElementById('locked').style.display='flex'});document.addEventListener('keydown',e=>{if(e.keyCode==123||e.ctrlKey&&e.shiftKey&&e.keyCode==73||e.ctrlKey&&e.shiftKey&&e.keyCode==74||e.ctrlKey&&e.keyCode==85){e.preventDefault();document.getElementById('locked').style.display='flex'}});const t=['Front-End Developer','UI/UX Designer','Web Developer'];let i=0,c=0,del=false,s=150;function type(){const curr=t[i];if(del){document.getElementById('t').textContent=curr.substring(0,c-1);c--;s=50}else{document.getElementById('t').textContent=curr.substring(0,c+1);c++;s=150}if(!del&&c===curr.length){s=2000;del=true}else if(del&&c===0){del=false;i=(i+1)%t.length;s=500}setTimeout(type,s)}type();document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const href=a.getAttribute('href');if(href!=='#purchase'){e.preventDefault();document.getElementById('locked').style.display='flex'}})});const links=document.querySelectorAll('.project-card, .btn-secondary');links.forEach(l=>{l.addEventListener('click',e=>{if(!e.target.closest('.btn-primary')){e.preventDefault();document.getElementById('locked').style.display='flex'}})});setInterval(()=>{const w=document.createElement('div');w.style.cssText='position:fixed;top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;color:rgba(59,130,246,0.1);font-size:14px;font-weight:700;transform:rotate(-45deg);pointer-events:none;z-index:1';w.textContent='DEMO';document.body.appendChild(w);setTimeout(()=>w.remove(),5000)},10000)})();
+</script>
+</body>
+</html>
